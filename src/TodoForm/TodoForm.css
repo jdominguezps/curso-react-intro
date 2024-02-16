@@ -1,0 +1,33 @@
+form {
+    margin: 0;
+}
+
+textarea{
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+}
+
+.TodoForm-buttonContainer{
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 48px;
+    font-weight: normal;
+}
+
+.TodoForm-button--cancel{
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 48px;
+    font-weight: normal;
+}
+
+.TodoForm-button--add{
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 48px;
+    font-weight: normal;
+}
