@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import { useLocalStorage } from './useLocalStorage.js';
 
 const TodoContext = React.createContext();
@@ -18,6 +18,12 @@ function TodoProvider({children}) {
       }
       );
   
+    const addTodo = (text) => {
+      const newTodos = [...todos];
+      newTodos.push({ text, completed: false });
+      saveTodos(newTodos);
+    };
+
     const completeTodo = (id) => {
       const newTodos = [...todos];
       const todoIndex = newTodos.findIndex(
@@ -45,6 +51,7 @@ function TodoProvider({children}) {
             searchValue,
             setSearchValue,
             searchedTodos,
+            addTodo,
             completeTodo,
             deleteTodo,
             openModal,
