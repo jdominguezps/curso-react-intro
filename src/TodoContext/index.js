@@ -20,7 +20,8 @@ function TodoProvider({children}) {
   
     const addTodo = (text) => {
       const newTodos = [...todos];
-      newTodos.push({ text, completed: false });
+      const new_id = Math.max(...todos.map((todo)=>todo.id),0)+1;
+      newTodos.push({ id: new_id, text, completed: false });
       saveTodos(newTodos);
     };
 

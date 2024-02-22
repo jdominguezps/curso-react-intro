@@ -12,7 +12,12 @@ const [newTodoValue, setNewTodoValue] = React.useState('');
 
 const onSubmit = (event) => {
     event.preventDefault();
-    addTodo(newTodoValue);
+
+    // Valida que el Texto del Todo no se encuentre vacío
+    const var_newTodoValue = newTodoValue.trim();
+    if (var_newTodoValue.length === 0) return;
+
+    addTodo(var_newTodoValue);
     setOpenModal(false);
 };
 
